@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "autowhen2meet",
+  "version": "1.0",
+  "description": "Autopopulate when2meet with your Google Calendar",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.when2meet.com/*"
+      ],
+      "run_at": "document_idle",
+      "js": ["autowhen2meet.js"]
+    }
+  ],
+  "permissions": [
+    "identity"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "oauth2": {
+    "client_id": "888289321634-auceo6jentd9ijltorn766f7pqgrdrp1.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.readonly"
+    ]
+  }
+}
