@@ -3,6 +3,7 @@
   "name": "autowhen2meet",
   "version": "1.0",
   "description": "Autopopulate when2meet with your Google Calendar",
+  "icon": "icon.png",
   "content_scripts": [
     {
       "matches": [
@@ -19,7 +20,7 @@
     "service_worker": "background.js"
   },
   "oauth2": {
-    "client_id": "888289321634-auceo6jentd9ijltorn766f7pqgrdrp1.apps.googleusercontent.com",
+    "client_id": "888289321634-mvvts0pfbtpkkh21qvhdorvng492hrj7.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/calendar.readonly"
     ]

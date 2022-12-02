@@ -3,6 +3,7 @@
 
 const millisPerSec = 1000
 const fifteenMinutes = 15 * 60 * millisPerSec
+const fillDelay = 50;
 
 function getGridTime(col, row) {
   return grid.children[row].children[col].id.substring(9) * millisPerSec
@@ -51,7 +52,7 @@ function updateAvailability() {
       }
     }
 
-    let delay = 10
+    let delay = fillDelay
     for (let i = 0; i < numCols; i++) {
       for (let j = 0; j < numRows; j++) {
         if (!busyGrid[i][j]) {
@@ -63,7 +64,7 @@ function updateAvailability() {
           setTimeout((i, j) => {
             toggleRange(i, start, j - 1)
           }, delay, i, j)
-          delay += 10
+          delay += fillDelay
         }
       }
     }
